@@ -1,0 +1,259 @@
+/**
+ * @package     Cattive.Site
+ * @subpackage  Templates.cattive
+ *
+ * @copyright   Copyright (C) 2015, Inc. All rights reserved.
+ * @license     GNU General Public License version 2 or later; see LICENSE.txt
+ */
+
+
+@import url(http://fonts.googleapis.com/css?family=Lato:100,400,700);
+
+html, body {height:100%;}
+
+body {    
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  color: #FFF;
+  background-color:#f5f5f5;
+  height: 100%;
+}
+
+body a {
+    -moz-transition: all .2s ease-in;
+    -o-transition: all .2s ease-in;
+    -webkit-transition: all .2s ease-in;
+    transition: all .2s ease-in;
+}
+
+:hover {
+    -moz-transition: all .2s ease-in;
+    -o-transition: all .2s ease-in;
+    -webkit-transition: all .2s ease-in;
+    transition: all .2s ease-in;
+}
+
+.fr {
+    float: right;
+}
+
+.fl {
+    float: left;
+}
+
+.cb {
+  clear: both;
+}
+
+.pace {
+  -webkit-pointer-events: none;
+  pointer-events: none;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.pace .pace-progress,
+.pace .pace-inactive {
+  background: #4d90fe;
+  position: fixed;
+  z-index: 2000;
+  top: 0;
+  right: 100%;
+  width: 100%;
+  height: 2px;
+}
+
+
+.navbar-cattive {
+  background-color: #FFF;
+  color: #889fae;
+}
+
+.si-icons > a {
+  margin-top: -13px;
+}
+
+.navbar-cattive a:link,
+.navbar-cattive a:visited,
+.navbar-cattive a:active,
+.navbar-cattive a:hover {
+  color: #889fae;
+  text-decoration: none;
+}
+
+.navbar {
+  margin-bottom: 0;
+}
+
+.teste {
+  background-color: #4d90fe;
+  height: 50px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  line-height: 50px;
+}
+
+.logo {
+  padding: 10px 20px 7px 20px;
+}
+
+.si-icon {
+  cursor: pointer;
+}
+
+.si-icon svg {
+  width: 26px!important;
+  height: auto;
+}
+
+.icons {
+  background-color: #CCC;
+}
+
+/* Menu */
+.megamenu {
+				position:absolute;
+        z-index: 9999;
+        margin-top: 70px;
+			}
+
+.menu {
+        color: #737373;
+        font-weight: bold;
+        font-size: 12px;
+        background-color: #FFF;
+       -webkit-box-shadow: -10px 11px 21px -4px rgba(0,0,0,0.11);
+        -moz-box-shadow: -10px 11px 21px -4px rgba(0,0,0,0.11);
+        box-shadow: -10px 11px 21px -4px rgba(0,0,0,0.11);
+        height: 470px;
+			}
+			
+	.menu-pai > div,
+  .conteudo-filho-padrao > div {
+    padding-left: 23px; 
+  }	
+  
+  .menu-pai > div:first-child {
+    padding-top: 20px;
+    padding-bottom: 27px;
+  }
+
+	.menu-pai,
+  .menu-filho {
+    width: 205px;
+  }	
+		
+    	
+			.pai, 
+      .filho, 
+      .fixo {
+				padding: 6px 0 6px 0;
+				cursor: pointer;
+        border-left:2px solid #FFF;
+			}
+			
+			.pai:hover:not(.ultimaPatriarca), 
+      .filho:hover:not(.ultimaPatriarca) {
+				border-left:2px solid #14a0f8;
+				-moz-transition: all .2s ease-in;
+			  -o-transition: all .2s ease-in;
+			  -webkit-transition: all .2s ease-in;
+			  transition: all .2s ease-in;
+				}
+			
+		
+				
+			.ultimaPatriarca {
+        margin-top: 60px;
+				border-bottom: none;
+        padding-top: 0;
+        background-color: #fdfdfd;
+        height: 50px;
+        padding-top: 10px;
+        margin-bottom: 20px;
+			}
+			
+      
+      .ultimaPatriarca > div {
+          padding-left: 0;
+          padding-right: 0;
+      }
+      
+      .ultimaPatriarca img {
+        border-radius: 3px;
+        margin-right: 10px;
+      }
+      
+      .ultimaPatriarca a {
+        display:block;
+      }
+      
+      .ultimaPatriarca a:first-child
+      {
+        color: #4d90fe;
+      }
+      
+      .ultimaPatriarca a:last-child,
+      .ultimaPatriarca a:last-child:hover {
+        padding-top: 7px;
+        color: #aaa;
+        font-size: 11px;
+      }
+      
+      .ultimaPatriarca:hover {
+        border-left:2px solid #14a0f8;
+        
+      }
+
+			.ultimaPatriarca a:link,
+			.ultimaPatriarca a:visited,
+			.ultimaPatriarca a:active {
+				text-decoration: none;
+			}
+			.ultimaPatriarca a:hover {
+				color: #004185;
+				text-decoration: none;
+			}
+      
+      .menu-pesquisar > input {
+        border: none;
+        outline: none; 
+      }
+      
+      .menu-pesquisar > ::-webkit-input-placeholder {
+       color: #737373;
+       font-size: 13px;
+       font-weight: normal;
+      }
+      
+      .menu-pesquisar > :-moz-placeholder {
+        color: #737373;
+        font-size: 13px;
+        font-weight: normal;
+      }
+      
+      .menu-pesquisar > ::-moz-placeholder {
+        color: #737373;
+        font-size: 13px;
+        font-weight: normal;
+      }
+      
+      .menu-pesquisar > :-ms-input-placeholder {  
+        color: #737373;
+        font-size: 13px;
+        font-weight: normal;
+      }
+      
+      .menu-filho  > .conteudo-filho-padrao > div:first-child {
+        padding-top: 30px;
+      }
+      
+      .menu-filho  .item-filho {
+        font-size: 14px;
+      }
+      
+      .menu-filho  div:nth-of-type(2){
+        margin-top: 20px;
+      }
