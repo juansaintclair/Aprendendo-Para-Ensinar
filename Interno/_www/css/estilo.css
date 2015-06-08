@@ -9,7 +9,7 @@
 
 @import url(http://fonts.googleapis.com/css?family=Lato:100,400,700);
 
-html, body {height:100%;}
+
 
 body {    
   font-family: 'Lato', sans-serif;
@@ -71,9 +71,7 @@ body a {
   color: #889fae;
 }
 
-.si-icons > a {
-  margin-top: -13px;
-}
+
 
 .navbar-cattive a:link,
 .navbar-cattive a:visited,
@@ -99,6 +97,11 @@ body a {
   padding: 10px 20px 7px 20px;
 }
 
+.logo img {
+  height: 40px;
+  width: auto;
+}
+
 .si-icon {
   cursor: pointer;
 }
@@ -106,6 +109,26 @@ body a {
 .si-icon svg {
   width: 26px!important;
   height: auto;
+  float: left;
+}
+
+.si-icons-default > span > a {
+  font-size: 13px;
+  font-weight: bold;
+  color: #889fae;
+  float: right;
+  padding-top: 16px;
+}
+
+@-moz-document url-prefix() { 
+  .si-icons-default > span > a {
+     padding-top: 13px;
+  }
+}
+
+.menu-top {
+  width: 65px;
+  margin-top: 12px;
 }
 
 .icons {
@@ -113,31 +136,52 @@ body a {
 }
 
 /* Menu */
+.menuzin {
+  height: 100%;  
+}
+
 .megamenu {
 				position:absolute;
         z-index: 9999;
         margin-top: 70px;
+        display: none;
 			}
 
-.menu {
+.menu,
+.mp-menu {
         color: #737373;
         font-weight: bold;
         font-size: 12px;
         background-color: #FFF;
-       -webkit-box-shadow: -10px 11px 21px -4px rgba(0,0,0,0.11);
-        -moz-box-shadow: -10px 11px 21px -4px rgba(0,0,0,0.11);
-        box-shadow: -10px 11px 21px -4px rgba(0,0,0,0.11);
-        height: 470px;
 			}
 			
+.menu {
+  height: 470px;
+         -webkit-box-shadow: -10px 11px 21px -4px rgba(0,0,0,0.11);
+        -moz-box-shadow: -10px 11px 21px -4px rgba(0,0,0,0.11);
+        box-shadow: -10px 11px 21px -4px rgba(0,0,0,0.11);
+}      
 	.menu-pai > div,
-  .conteudo-filho-padrao > div {
+  .conteudo-filho-padrao > div,
+  .mp-menu ul li,
+  .mp-level > div:first-child,
+  .mp-menu .ultimaPatriarca {
     padding-left: 23px; 
   }	
   
-  .menu-pai > div:first-child {
+  .mp-menu ul > li i:not(.menu-mobile-power-off) {
+    padding-left: 10px;
+  }
+  
+  .menu-pai > div:first-child,
+  .mp-menu > div:first-child,
+  .mp-level > div:first-child {
     padding-top: 20px;
     padding-bottom: 27px;
+  }
+  
+  .mp-level > div:first-child {
+    padding-top: 0;
   }
 
 	.menu-pai,
@@ -148,14 +192,25 @@ body a {
     	
 			.pai, 
       .filho, 
-      .fixo {
-				padding: 6px 0 6px 0;
+      .fixo,
+      .mp-menu ul li > a {
 				cursor: pointer;
         border-left:2px solid #FFF;
 			}
-			
+      
+			.mp-menu ul li > a:active {
+        text-decoration: none;
+      } 
+      
+      .pai, 
+      .filho, 
+      .fixo {
+        padding: 6px 0 6px 0;
+      }
+      
 			.pai:hover:not(.ultimaPatriarca), 
-      .filho:hover:not(.ultimaPatriarca) {
+      .filho:hover:not(.ultimaPatriarca),
+      .mp-menu ul li > a:hover {
 				border-left:2px solid #14a0f8;
 				-moz-transition: all .2s ease-in;
 			  -o-transition: all .2s ease-in;
@@ -257,3 +312,70 @@ body a {
       .menu-filho  div:nth-of-type(2){
         margin-top: 20px;
       }
+
+
+@media (max-width: 699px) {
+  .megamenu {
+    margin-left: -2px;
+  }
+  .menu-top {
+    width: 10px;
+  }
+  .menu-filho,
+  .menu-img {
+    display:none;
+  }
+}
+
+
+/* Menu Lateral no Mobile */
+.mp-level {
+  background-color:#FFF;
+}
+
+
+.mp-pusher::after, .mp-level::after {
+  background:none;
+}
+
+.mp-level > ul > li:first-child > a {
+    box-shadow: none;
+}
+
+.mp-menu {
+-webkit-box-shadow: 10px -5px 15px -18px rgba(0,0,0,0.43);
+-moz-box-shadow: 10px -5px 15px -18px rgba(0,0,0,0.43);
+box-shadow: 10px -5px 15px -18px rgba(0,0,0,0.43);
+}
+
+.mp-menu ul li {
+  padding-left: 0;
+}
+
+.mp-menu ul li > a {
+  font-size: 12px;
+  color: #737373;
+}
+
+.mp-menu ul li > a:hover {
+  text-decoration: none;
+  background-color: none;
+}
+
+.mp-menu ul li {
+  border-bottom:none!important;
+  outline:none;
+}
+
+.mp-back:hover {
+  text-decoration: none!important;
+  color: #4d90fe;
+}
+
+.mp-menu i {
+  display: inline;
+}
+
+.mp-menu a:active {
+  text-decoration: none!important;  
+}
